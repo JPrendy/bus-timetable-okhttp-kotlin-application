@@ -13,8 +13,16 @@ The existing repository is a template, I can generate new repositories with the 
 
 ## Setup Steps
 
+Go to the app module build.gradle and add the following test dependency
+
 ```
-Code here
+implementation("com.squareup.okhttp3:okhttp:4.7.2")
+```
+
+Go to the `AndroidManifest.xml` and allow internet permission
+
+```
+<uses-permission android:name="android.permission.INTERNET"/>
 ```
 
 ## How to run the project locally
@@ -25,5 +33,9 @@ Code here
 
 ## Helpful resources
 
-The following link provides helpful information
-- [link](https://github.com/JPrendy/template-repository).
+Issues related to the emulator not connecting to the internet.
+- [link](https://stackoverflow.com/a/49332186).
+
+Great video on how to fetch JSON with OkHttp and Gson with Kotlin.
+- [link](https://www.youtube.com/watch?v=53BsyxwSBJk).
+
