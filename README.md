@@ -17,6 +17,7 @@ Go to the app module build.gradle and add the following test dependency
 
 ```
 implementation("com.squareup.okhttp3:okhttp:4.7.2")
+implementation("com.google.code.gson:gson:2.8.6")
 ```
 
 Go to the `AndroidManifest.xml` and allow internet permission
