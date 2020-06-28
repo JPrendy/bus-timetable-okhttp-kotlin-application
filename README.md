@@ -40,3 +40,7 @@ Issues related to the emulator not connecting to the internet.
 Great video on how to fetch JSON with OkHttp and Gson with Kotlin.
 - [link](https://www.youtube.com/watch?v=53BsyxwSBJk).
 
+OkHttp official references for asynchronous get examples in Kotlin
+- [link](https://square.github.io/okhttp/recipes/).
+
+

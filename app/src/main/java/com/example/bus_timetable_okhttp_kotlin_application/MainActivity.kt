@@ -59,6 +59,34 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
+//{
+//    "errorcode": "0",
+//    "errormessage": "",
+//    "numberofresults": 2,
+//    "stopid": "1187",
+//    "timestamp": "28/06/2020 18:02:59",
+//    "results": [
+//    {
+//        "arrivaldatetime": "28/06/2020 18:17:00",
+//        "duetime": "14",
+//        "departuredatetime": "28/06/2020 18:17:00",
+//        "departureduetime": "14",
+//        "scheduledarrivaldatetime": "28/06/2020 18:19:00",
+//        "scheduleddeparturedatetime": "28/06/2020 18:19:00",
+//        "destination": "Beaumont",
+//        "destinationlocalized": "Beaumont",
+//        "origin": "Dundrum",
+//        "originlocalized": "Dundrum",
+//        "direction": "Inbound",
+//        "operator": "bac",
+//        "operatortype": "1",
+//        "additionalinformation": "",
+//        "lowfloorstatus": "no",
+//        "route": "14",
+//        "sourcetimestamp": "28/06/2020 17:58:04",
+//        "monitored": "true"
+//    },
+
 class HomeFeed(val results: List<Results>)
 
 class Results(val duetime: String)
