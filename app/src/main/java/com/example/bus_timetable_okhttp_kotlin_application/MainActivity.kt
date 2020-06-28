@@ -1,6 +1,7 @@
 package com.example.bus_timetable_okhttp_kotlin_application
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.GsonBuilder
 import okhttp3.*
@@ -18,8 +19,9 @@ class MainActivity : AppCompatActivity() {
     fun fetchJson() {
         println("hello")
 
-//        val url = "https://data.smartdublin.ie/cgi-bin/rtpi/realtimebusinformation?stopid=1187&format=json"
-        val url = "https://api.letsbuildthatapp.com/youtube/home_feed"
+        //
+        // val testUrl = "https://api.letsbuildthatapp.com/youtube/home_feed"
+       val url = "https://data.smartdublin.ie/cgi-bin/rtpi/realtimebusinformation?stopid=1187&format=json"
 
         val request = Request.Builder().url(url).build()
 
@@ -44,16 +46,23 @@ class MainActivity : AppCompatActivity() {
                     val gson = GsonBuilder().create()
 
                     val homeFeed = gson.fromJson(body, HomeFeed:: class.java)
-               // }
+
+                    runOnUiThread {
+                        val video = homeFeed.results.get(0)
+                        val test = video.duetime
+                        val text = findViewById<TextView>(R.id.ok)
+                        text.text = "the next bus is due $test minutes"
+                    }
+                // }
             }
         })
     }
 }
 
-//class HomeFeed(val results: List<Results>)
-//
-//class Results(val scheduledarrivaldatetime: String)
+class HomeFeed(val results: List<Results>)
 
-class HomeFeed(val videos: List<Video>)
+class Results(val duetime: String)
 
-class Video(val id: Int, val name: String)
+
+//class HomeFeed(val videos: List<Video>)
+//class Video(val id: Int, val name: String)
