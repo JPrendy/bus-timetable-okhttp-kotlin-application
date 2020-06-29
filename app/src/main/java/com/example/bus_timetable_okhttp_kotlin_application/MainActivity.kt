@@ -1,6 +1,7 @@
 package com.example.bus_timetable_okhttp_kotlin_application
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.GsonBuilder
@@ -13,7 +14,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        fetchJson()
+        val button = findViewById<Button>(R.id.button)
+        button.setOnClickListener(){
+
+            fetchJson()
+        }
+
     }
 
     fun fetchJson() {
@@ -21,9 +27,8 @@ class MainActivity : AppCompatActivity() {
 
         //
         // val testUrl = "https://api.letsbuildthatapp.com/youtube/home_feed"
-       val url = "https://data.smartdublin.ie/cgi-bin/rtpi/realtimebusinformation?stopid=1187&format=json"
 
-        val request = Request.Builder().url(url).build()
+        val request = Request.Builder().url(Url().getBaseUrl()).build()
 
         val client = OkHttpClient()
 

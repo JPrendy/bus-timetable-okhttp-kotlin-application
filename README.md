@@ -18,6 +18,10 @@ Go to the app module build.gradle and add the following test dependency
 ```
 implementation("com.squareup.okhttp3:okhttp:4.7.2")
 implementation("com.google.code.gson:gson:2.8.6")
+androidTestImplementation "com.squareup.okhttp3:mockwebserver:4.6.0"
+androidTestImplementation 'androidx.test:rules:1.1.1'
+androidTestImplementation 'androidx.test.ext:truth:1.1.0'
+androidTestImplementation 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0'
 ```
 
 Go to the `AndroidManifest.xml` and allow internet permission
