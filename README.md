@@ -1,8 +1,8 @@
-# template-repository
+# Bus timetable Okhttp Kotlin application
 
 ## Description
 
-The existing repository is a template, I can generate new repositories with the same directory structure, branches, and files.
+The following is a simple Kotlin application that uses Okhttp to fetch rest api data that is then shown on the activity screen of the application.
 
 ## Contents
 
